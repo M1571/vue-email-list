@@ -10,9 +10,41 @@
 // START
 
 // console.log(axios);
+// axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
+//  .then(function (response) {
+//     // const result = response.data;
+//     console.log(response);
+// });
 
-axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
- .then(function (response) {
-    // const result = response.data;
-    console.log(response);
-});
+// -----------------------------
+
+const app = new Vue ({
+
+    el: '#app',
+    data: {
+        mail: [],
+
+    },
+
+    created() {
+
+        for (let i = 0; i < 10; i++) {
+
+            axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
+            .then( (res) => {
+                console.log(res);
+                console.log(res.data);
+                this.mail = res.data.response;
+            })
+            
+            console.log('created after axios request');
+
+        }
+    }
+})
+
+
+
+
+
+
