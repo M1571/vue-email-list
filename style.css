@@ -4,4 +4,23 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: antiquewhite;
+}
+
 /* ----------------------------- */
+
+.main {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+h1 {
+    border: 12px solid royalblue;
+    padding: 40px;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: lightcoral;
+}
